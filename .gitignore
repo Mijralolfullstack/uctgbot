@@ -3,3 +3,8 @@ bot.db
 __pycache__/
 *.pyc
 .venv/
+venv/
+files/
+__MACOSX/
+.DS_Store
+*.save

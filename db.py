@@ -1,13 +1,10 @@
-import os
 import time
 import aiosqlite
 
-# Railway'da Volume ulab, DB_PATH=/data/bot.db qilib qo'ying (aks holda deploydan keyin baza o'chadi)
-DB = os.getenv("DB_PATH", "bot.db")
+DB = "bot.db"
 
 
 async def init():
-    os.makedirs(os.path.dirname(os.path.abspath(DB)), exist_ok=True)
     async with aiosqlite.connect(DB) as db:
         await db.executescript(
             """
